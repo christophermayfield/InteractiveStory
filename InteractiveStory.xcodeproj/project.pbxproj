@@ -13,6 +13,7 @@
 		FAB6B6E81D29FDE700A9424B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB6B6E71D29FDE700A9424B /* Assets.xcassets */; };
 		FAB6B6EB1D29FDE700A9424B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB6B6E91D29FDE700A9424B /* LaunchScreen.storyboard */; };
 		FAB6B6F31D2CDE1000A9424B /* InteractiveStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6B6F21D2CDE1000A9424B /* InteractiveStory.swift */; };
+		FAB6B6F51D3028D700A9424B /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6B6F41D3028D700A9424B /* PageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FAB6B6EA1D29FDE700A9424B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB6B6EC1D29FDE700A9424B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAB6B6F21D2CDE1000A9424B /* InteractiveStory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveStory.swift; sourceTree = SOURCE_ROOT; };
+		FAB6B6F41D3028D700A9424B /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageController.swift; path = ../PageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FAB6B6E01D29FDE700A9424B /* AppDelegate.swift */,
 				FAB6B6E21D29FDE700A9424B /* ViewController.swift */,
 				FAB6B6E41D29FDE700A9424B /* Main.storyboard */,
+				FAB6B6F41D3028D700A9424B /* PageController.swift */,
 				FAB6B6F21D2CDE1000A9424B /* InteractiveStory.swift */,
 				FAB6B6E71D29FDE700A9424B /* Assets.xcassets */,
 				FAB6B6E91D29FDE700A9424B /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB6B6F51D3028D700A9424B /* PageController.swift in Sources */,
 				FAB6B6F31D2CDE1000A9424B /* InteractiveStory.swift in Sources */,
 				FAB6B6E31D29FDE700A9424B /* ViewController.swift in Sources */,
 				FAB6B6E11D29FDE700A9424B /* AppDelegate.swift in Sources */,

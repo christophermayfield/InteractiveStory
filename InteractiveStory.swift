@@ -76,7 +76,7 @@ extension Page {
         
         return addChoice(title, page: page)
         
-        //now we can add a choice by simply indiciating what part of the story we want to go to next without worrying the details of a page.
+        //now we can add a choice by simply indiciating what part of the story we want to go to next without worrying about the details of a page.
     }
     
     func addChoice(title: String, page: Page) -> Page {
@@ -96,9 +96,13 @@ struct Adventure {
     
     static var story: Page {
         let returnTrip = Page(story: .ReturnTrip)
+        
         let touchDown = returnTrip.addChoice("Stop and Investigate", story: .TouchDown) //remember that the way we designed this, the story we pass in creates a page and then this method returns that page
+        
         let homeWord = returnTrip.addChoice("Continue Home to Earth ", story: .Homeward)
+        
         let rover = returnTrip.addChoice("Explore the rover", story: .Rover)
+        
         let crate = touchDown.addChoice("Open the crate", story: .Crate)
         
         homeWord.addChoice("Headed back to home", page: touchDown)
@@ -110,7 +114,7 @@ struct Adventure {
         cave.addChoice("Continue towards the faint light", story: .Droid)
         cave.addChoice("Refill the ship and explore the rover", page: rover)
         
-        crate.addChoice("Explore the crate", page: crate)
+        crate.addChoice("Explore the crate", page: rover)
         crate.addChoice("Use the Key", story: .Monster)
         
         return returnTrip
