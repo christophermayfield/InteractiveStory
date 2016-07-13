@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class PageController: UIViewController {
     var page: Page?
+    var sound: SystemSoundID = 0
     
     //properties for the UI stuff
     
@@ -119,6 +121,8 @@ class PageController: UIViewController {
             //the next step in the tree is stored by the firstChoice property 
             let nextPage = firstChoice.page
             let pageController = PageController(page: nextPage)
+            
+            playSound(nextPage.story.soundEffectURL)
         
             
             //every viewController has an optional property navigationController, if your VC is part of a navigation stack, the property refers to the navigation controller, using this prop. we can ask the navigation controller to push another viewcontroller onto the stack. 
@@ -132,11 +136,21 @@ class PageController: UIViewController {
             let nextPage = secondChoice.page
             let pageController = PageController(page: nextPage) //we are getting the page from the secondPage.
             
+            playSound(nextPage.story.soundEffectURL)
+            
             navigationController?.pushViewController(pageController, animated: true)
         }
     }
     
     func playAgain() {
         navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    func playSound(url: NSURL) {
+        //takes the location to the sound and crates a systemSound out of it 
+        
+        AudioServicesCreateSystemSoundID(url, &sound) //the & in front of a variable is a pointer, we are pointing to the location in memory will the value will reside. 
+        
+        AudioServicesPlaySystemSound(sound)
     }
 }

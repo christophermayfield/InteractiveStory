@@ -29,6 +29,21 @@ extension Story {
         //force unwrapping is usually bad, we are using the enums rawValue, as long the enum member and image name match, we are always getting the iamge, we are also not using the rawValue as an argument to the intializer method directly we are going through the computed property.
     }
     
+    var soundEffectURL: NSURL {
+        let fileName: String
+        
+        switch self {
+        case .Droid, .Home: fileName = "HappyEnding"
+        case .Monster: fileName = "Ominous"
+        default: fileName = "PageTurn"
+        }
+       
+        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "wav")!
+        
+        return NSURL(fileURLWithPath: path)
+        
+    }
+    
     var text: String {
         switch self {
         case .ReturnTrip:
